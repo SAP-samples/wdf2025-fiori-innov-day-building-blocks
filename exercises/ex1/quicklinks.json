@@ -1,0 +1,92 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "traveldashboard.cards.quicklinks",
+		"type": "card",
+		"title": "Quick Links",
+		"subTitle": "",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"shortTitle": "Quick Links",
+		"info": "Card displaying quick links",
+		"description": "Card displaying quick links",
+		"tags": {
+			"keywords": [
+				"Quick Links"
+			]
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://list"
+		}
+	},
+	"sap.card": {
+		"type": "List",
+		"header": {
+			"title": "Quick Links",
+			"actions": [
+				{
+					"type": "Navigation",
+					"parameters": {
+						"url": "/quickLinks"
+					}
+				}
+			]
+		},
+		"content": {
+			"data": {
+				"json": [
+					{
+						"Name": "Travel Team",
+						"icon": "sap-icon://leads",
+						"url": ""
+					},
+					{
+						"Name": "Company Directory",
+						"icon": "sap-icon://address-book",
+						"url": ""
+					},
+					{
+						"Name": "Check Lists",
+						"icon": "sap-icon://activity-items",
+						"url": ""
+					},
+					{
+						"Name": "Travel Compliance",
+						"icon": "sap-icon://target-group",
+						"url": ""
+					},
+					{
+						"Name": "Flight Bookings",
+						"icon": "sap-icon://travel-expense",
+						"url": ""
+					},
+					{
+						"Name": "Special Offers",
+						"icon": "sap-icon://general-leave-request",
+						"url": ""
+					}
+				]
+			},
+			"maxItems": 6,
+			"item": {
+				"icon": {
+					"src": "{icon}"
+				},
+				"title": "{Name}",
+				"actions": [
+					{
+						"type": "Navigation",
+						"enabled": "{= ${url}}",
+						"parameters": {
+							"url": "{url}"
+						}
+					}
+				]
+			}
+		}
+	}
+}

@@ -1,0 +1,89 @@
+{
+	"_version": "1.33.0",
+	"sap.app": {
+		"id": "traveldashboard.cards.bookingsbyairline",
+		"type": "card",
+		"title": "Bookings by Airline",
+		"subTitle": "",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"shortTitle": "Bookings by Airline",
+		"info": "Card displaying bookings by airline",
+		"description": "Card displaying bookings by airline",
+		"tags": {
+			"keywords": [
+				"Bookings"
+			]
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://line-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+		"extension": "./ChartExtension",
+		"header": {
+			"title": "Bookings by Airline"
+		},
+		"content": {
+			"chartType": "Donut",
+			"chartProperties": {
+				"legendGroup": {
+					"layout": {
+						"position": "bottom"
+					}
+				},
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					}
+				},
+				"title": {
+					"visible": false
+				}
+			},
+			"data": {
+				"request": {
+					"url": "/processor/Booking?$orderby=countBookings%20desc&$apply=groupby((to_Carrier_AirlineID,to_Carrier/Name),aggregate(BookingUUID%20with%20countdistinct%20as%20countBookings))&$skip=0"
+				},
+				"path": "/value"
+			},
+			"dimensions": [
+				{
+					"name": "Airline",
+					"value": "{to_Carrier/Name}"
+				}
+			],
+			"measures": [
+				{
+					"name": "Bookings",
+					"value": "{countBookings}"
+				}
+			],
+			"feeds": [
+				{
+					"type": "Dimension",
+					"uid": "color",
+					"values": [
+						"Airline"
+					]
+				},
+				{
+					"type": "Measure",
+					"uid": "size",
+					"values": [
+						"Bookings"
+					]
+				}
+			],
+			"popover": {
+				"active": true
+			},
+			"actionableArea": "Chart"
+		}
+	}
+}

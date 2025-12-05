@@ -1,0 +1,90 @@
+{
+	"_version": "1.14.0",
+	"sap.app": {
+		"id": "traveldashboard.cards.bookingsbydate",
+		"type": "card",
+		"title": "Bookings by Date",
+		"subTitle": "",
+		"applicationVersion": {
+			"version": "1.0.0"
+		},
+		"shortTitle": "Bookings by Date",
+		"info": "Card displaying bookings by date",
+		"description": "Card displaying bookings by date",
+		"tags": {
+			"keywords": [
+				"Bookings"
+			]
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {
+			"icon": "sap-icon://column-chart"
+		}
+	},
+	"sap.card": {
+		"type": "Analytical",
+		"header": {
+			"title": "Bookings by Date"
+		},
+		"content": {
+			"data": {
+				"request": {
+					"url": "/processor/Booking?$orderby=FlightDate desc&$apply=groupby((FlightDate),aggregate(BookingUUID%20with%20countdistinct%20as%20countBookings))&$skip=0&$top=6"
+				},
+				"path": "/value"
+			},
+			"chartType": "timeseries_line",
+			"chartProperties": {
+				"plotArea": {
+					"dataLabel": {
+						"visible": true
+					}
+				},
+				"timeAxis": {
+					"title": {
+						"visible": false
+					}
+				},
+				"valueAxis": {
+					"title": {
+						"visible": false
+					}
+				},
+				"title": {
+					"visible": false
+				}
+			},
+			"dimensions": [
+				{
+					"name": "Date",
+					"value": "{FlightDate}",
+					"dataType":"date"
+				}
+			],
+			"measures": [
+				{
+					"name": "Bookings",
+					"value": "{countBookings}"
+				}
+			],
+			"feeds": [
+				{
+					"uid": "valueAxis",
+					"type": "Measure",
+					"values": [
+						"Bookings"
+					]
+				},
+				{
+					"uid": "timeAxis",
+					"type": "Dimension",
+					"values": [
+						"Date"
+					]
+				}
+			]
+		}
+	}
+}

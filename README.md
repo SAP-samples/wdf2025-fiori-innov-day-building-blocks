@@ -1,41 +1,47 @@
-# SAP-samples/repository-template
-This default template for SAP Samples repositories includes files for README, LICENSE, and REUSE.toml. All repositories on github.com/SAP-samples will be created based on this template.
-
-# Containing Files
-
-1. The LICENSE file:
-In most cases, the license for SAP sample projects is `Apache 2.0`.
-
-2. The REUSE.toml file: 
-The [Reuse Tool](https://reuse.software/) must be used for your samples project. You can find the REUSE.toml in the project initial. Please replace the parts inside the single angle quotation marks < > by the specific information for your repository.
-
-3. The README.md file (this file):
-Please edit this file as it is the primary description file for your project. You can find some placeholder titles for sections below.
-
-# [Title]
-<!-- Please include descriptive title -->
-
-<!--- Register repository https://api.reuse.software/register, then add REUSE badge:
-[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/REPO-NAME)](https://api.reuse.software/info/github.com/SAP-samples/REPO-NAME)
--->
+# Fiori Innovation Day Walldorf<br>Flexibility at Scale with Freestyle SAPUI5 and SAP Fiori elements
 
 ## Description
-<!-- Please include SEO-friendly description -->
+
+This hands-on session for SAP Fiori Innovation Day Walldorf guides you through building a flexible travel dashboard and object-centric UX by combining freestyle SAPUI5, SAP Fiori elements templates and building blocks (tables, filter bar), and the flexible programming model (custom sections, controller extensions). You start from a proven CAP back end based on the SFLIGHT sample service (adapted from the public repository: [cap-sflight](https://github.com/SAP-samples/cap-sflight)). That repository is well worth exploring separately for deeper CAP patterns (service definitions, draft handling, data model evolution, analytical queries etc.).
+
+![Preview of the travel dashboard](./exercises/ex1/images/ex1img37.png)
+
+## Overview
+
+Across the exercises you will:
+- Set up your development space in SAP Business Application Studio (Exercise 0).
+- Generate a Fiori elements Custom Page app bound to the CAP Travel service and enrich it with annotations and SAPUI5 integration cards (Exercise 1).
+- Add and structure an Object Page with grouped form sections and a related Bookings table (Exercise 2). 
+
+If you have extra time, you can try the following bonus exercise
+- Apply the flexible programming model: custom geo map section, FilterBar + Table in an extension, and a controller extension injecting business validation (Exercise 3).
+
+
+Key learning outcomes:
+- How metadata drives UI generation and reduces boilerplate.
+- How to extend with freestyle XML fragments while retaining Fiori elements consistency.
+
+Topics covered in the bonus exercise:
+- Reuse of building blocks (Table, FilterBar) in both template and custom contexts.
+- Implementing controller extensions for conditional logic in SAP Fiori elements without forking standard controllers.
 
 ## Requirements
 
-## Download and Installation
+No special requirements.
 
-## Known Issues
-<!-- You may simply state "No known issues. -->
+## Exercises
 
-## How to obtain support
-[Create an issue](https://github.com/SAP-samples/<repository-name>/issues) in this repository if you find a bug or have questions about the content.
- 
-For additional support, [ask a question in SAP Community](https://answers.sap.com/questions/ask.html).
+Start with [Exercise 0](exercises/ex0/README.md) to set up the environment before proceeding sequentially; each exercise builds on the previous one. Enjoy exploring flexibility at scale!
 
 ## Contributing
-If you wish to contribute code, offer fixes or improvements, please send a pull request. Due to legal reasons, contributors will be asked to accept a DCO when they create the first pull request to this project. This happens in an automated fashion during the submission process. SAP uses [the standard DCO text of the Linux Foundation](https://developercertificate.org/).
+Please read the [CONTRIBUTING.md](./CONTRIBUTING.md) to understand the contribution guidelines.
+
+## Code of Conduct
+Please read the [SAP Open Source Code of Conduct](https://github.com/SAP-samples/.github/blob/main/CODE_OF_CONDUCT.md).
+
+## How to obtain support
+
+Support for the content in this repository is available during the actual time of the online session for which this content has been designed. Otherwise, you may request support via the [Issues](../../issues) tab.
 
 ## License
-Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSES/Apache-2.0.txt) file.

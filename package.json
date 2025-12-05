@@ -1,0 +1,113 @@
+{
+  "name": "@capire/sflight",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CAP flight demo scenario",
+  "license": "SAP SAMPLE CODE LICENSE",
+  "repository": "https://github.com/SAP-samples/cap-sflight",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "npx eslint .",
+    "start": "cds-serve"
+  },
+  "dependencies": {
+    "@cap-js/hana": ">=2",
+    "@sap/cds": ">=9.1",
+    "@sap/xssec": "^4",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "@cap-js/cds-test": "^0",
+    "@cap-js/cds-typer": "^0.35.0",
+    "@cap-js/cds-types": "^0",
+    "@cap-js/sqlite": ">=2",
+    "@sap/cds-dk": ">=9.1",
+    "@sap/ux-specification": "^1.124.27",
+    "@types/jest": "^30.0.0",
+    "cds-plugin-ui5": "^0.13.1",
+    "cross-spawn": "^7.0.3",
+    "eslint": "^9",
+    "http-proxy": "^1.18.1",
+    "jest": "^30.1.0",
+    "qunit": "^2.9.3",
+    "ts-jest": "^29.2.5",
+    "tsx": "^4.19.2",
+    "typescript-eslint": "^8.12.2"
+  },
+  "cds": {
+    "watch": {
+      "excludes": ["**/node_modules", "**/target", "db/data.sqlite"]
+    },
+    "requires": {
+      "db": {
+        "kind": "sql"
+      }
+    },
+    "log": {
+      "service": true
+    },
+    "fiori": {
+      "wrap_multiple_errors": false
+    },
+    "build": {
+      "[node!]": {
+        "target": "gen",
+        "tasks": [
+          {
+            "for": "nodejs"
+          },
+          {
+            "for": "typescript"
+          },
+          {
+            "for": "hana"
+          }
+        ]
+      },
+      "[java]": {
+        "target": ".",
+        "tasks": [
+          {
+            "for": "java-cf"
+          }
+        ]
+      },
+      "[hana]": {
+        "target": "gen",
+        "tasks": [
+          {
+            "for": "hana"
+          }
+        ]
+      }
+    },
+    "typer": {
+      "output_directory": "@cds-models",
+      "use_entities_proxy": true
+    }
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globalSetup": "./test/setup.ts",
+    "testEnvironment": "node",
+    "testTimeout": 20000
+  },
+  "mocha": {
+    "node-option": [
+      "import=tsx"
+    ],
+    "require": "test/setup.ts",
+    "spec": "test/**/*.ts",
+    "timeout": 20000
+  },
+  "sapux": [
+  ],
+  "workspaces": [
+    "app/*"
+  ],
+  "imports": {
+    "#cds-models/*": "./@cds-models/*/index.js"
+  }
+}
