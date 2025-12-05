@@ -1,3 +1,4 @@
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/wdf2025-fiori-innov-day-building-blocks)](https://api.reuse.software/info/github.com/SAP-samples/wdf2025-fiori-innov-day-building-blocks)
 # Fiori Innovation Day Walldorf<br>Flexibility at Scale with Freestyle SAPUI5 and SAP Fiori elements
 
 ## Description
