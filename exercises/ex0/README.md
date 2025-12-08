@@ -37,64 +37,13 @@ Select the **projects** folder from the drop down
 
 ![image](images/ex0img8.png)
 
+Then select **wdf2025-fiori-innov-day-building-blocks**.
+
+![image](images/projectfolder.png)
+
 Click **OK** and your window will reload
 
-![image](images/ex0img9.png)
-
-## Getting the Sample Scenario
-
-To get the sample project into your development space, you need to clone the GitHub repository.
-
-Get the GitHub repository clone HTTPS URL from the repository's [landing page](https://github.com/SAP-samples/wdf2025-fiori-innov-day-building-blocks).
-Click on button **Code**, then click the copy icon.
-
-![copy link](../ex0/images/getcloneurl.png)
-
-In the dev space, we will see a **Welcome Page**.\
-Click on tile **Clone from Git**.
-
-![Click on link "Clone from Git"](../ex0/images/click-clone-from-git.png)
-
-> [!TIP]
-> Alternatively, you can go via menu **View → Find Command...** and search for command **git clone**.
-
-
-![command git clone](../ex0/images/cloneCommand.png)
-
-Paste the repository link into the input field.
-
-```
-https://github.com/vinayhospete/WDF2025-fiori-innovation-day-building-blocks.git
-```
-
-![Enter the github repository URL](../ex0/images/enter-github-repository.png)
-
-If asked for a repository folder select the **projects** folder and click **Select Repository Location**.
-
-When the cloning is finished, open the cloned repository.
-
-![Open cloned repository](../ex0/images/open_clone_repo.png)
-
-> [!TIP]
-> Alternatively, you can open a workspace via the file menu.
-> ![open workspace](../ex0/images/00_00_0065.png)
-> Select folder path **/home/user/projects/teched2025-CA263/** and click **OK**. This will restart SAP Business Application Studio.
-
-In the **Explorer** pane on the left side of SAP Business Application Studio, you should see the workspace content.
-
-![select ws folder](../ex0/images/wsopen.png)
-
-The last step in this exercise is to install the node modules. Click on the menu button → ***Terminal*** → ***New Terminal***
-
-![image](images/newterminal.png)
-
-Enter `npm install` and hit the ***Enter*** key.
-
-![image](images/npminstall.png)
-
-The node modules will be installed. Then the project is ready to proceed to exercise 1.
-
-In case you want to learn more about SAP CAP (Cloud Application Programming Model), head to its [official documentation](https://cap.cloud.sap/docs/).
+![image](images/ok.png)
 
 ## Summary
 
