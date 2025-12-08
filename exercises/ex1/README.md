@@ -41,7 +41,7 @@ For the **Data Source**, select the **Use a Local CAP Project** option.
 
 ![image](images/ex1img4.png)
 
-The Teched 2025 project details should be automatically entered. Click **Next**.
+The project details should be automatically entered. Click **Next**.
 
 ![image](images/ex1img5.png)
 
@@ -58,7 +58,7 @@ Enter the following project attributes:
 
 Select **Yes** for **Enable TypeScript** and leave the remaining selections as they have been pre-configured. 
 
-For the Minimum SAPUI5 Version the micro version 1.141.**X** doesn't matter. In the meantime SAPUI5 1.142.0 was released, you can also use this version.
+You can keep the minimum SAPUI5 version as is.
 
 Click **Finish**.
 
