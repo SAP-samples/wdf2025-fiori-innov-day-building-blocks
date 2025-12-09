@@ -47,7 +47,7 @@ Click **OK** and your window will reload
 
 ## Troubleshooting
 
-In rare cases we have recently seen an issue with the watch feature in the SAP Business Application Studio. If you see an error message similar to the one below, please stop the watch process in the terminal by pressing `Ctrl + C` while the focus is in the terminal. Then run `npm start` in the terminal. When you follow the link in the terminal a page will open in a new tab and you can continue testing using `/sap.fe.traveldashboard/test/flp.html#app-preview`.
+In rare cases we have recently seen an issue with the watch feature in the SAP Business Application Studio. If you see an error message similar to the one below, please stop the watch process in the terminal by pressing `Ctrl + C` while the focus is in the terminal. Then run `npm start` in the terminal. When you follow the link in the terminal a page will open in a new tab and you can continue testing using `/sap.fe.traveldashboard/test/flp.html#app-preview`. Once you have changed something in a CDS view or similar, you will need to stop the process again and run `npm start` again.
 
 ![image](images/image.png)
 
